@@ -47,9 +47,12 @@ function generatePassword() {
           stringFull += stringSpecial;
       }
       if (!stringFull) {
-      alert("Please select at least one character type");
-      writePassword();
-      }
+        alert("Please select at least one character type");
+          
+        return "Select at least one character type.";
+  
+        }
+
   // Collection of password length from user and validation of range
       
       let countInput = window.prompt("Number of characters (8-128)", "8");
@@ -58,6 +61,8 @@ function generatePassword() {
               countInput = window.prompt("Number of characters (8-128)", "8");
           }
   
+        
+
   // Selection of password characters from full string using random selection.
   // For loop is used to generate characters that are added into the password string until desired length is acheived.
       
